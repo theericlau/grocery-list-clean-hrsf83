@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import GroceryList from './components/GroceryList.jsx'
+
 
 class App extends React.Component {
   constructor(props) {
@@ -16,8 +18,12 @@ class App extends React.Component {
 
   
   render () {
-    return null;
-  }
+    console.log(this.state.list);
+    return (
+    <div className="groceryList">
+      <GroceryList list={this.state.list}/>
+    </div>
+    )}
 }
 
 ReactDOM.render(<App />, document.getElementById('app'));
